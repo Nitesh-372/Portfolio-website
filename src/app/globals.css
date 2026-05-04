@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -22,5 +23,66 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: default;
+}
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; scroll-behavior: smooth; }
+
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+}
+
+/* ── Hero side text ── */
+.hero-side {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  width: clamp(240px, 26vw, 420px);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-left {
+  left: 1%;
+  text-align: left;
+}
+
+.hero-right {
+  right: 1%;
+  text-align: right;
+}
+
+.hero-mobile-text {
+  display: none;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1100px) {
+  .hero-left { left: 1%; }
+  .hero-right { right: 1%; }
+  .hero-side { width: clamp(180px, 22vw, 300px); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hero-side { display: none; }
+  .hero-mobile-text {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    z-index: 4;
+  }
+}
+
+/* ── Prompt buttons grid ── */
+@media (max-width: 768px) {
+  .prompt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .prompt-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
 }
