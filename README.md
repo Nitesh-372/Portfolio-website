@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nitesh Gupta | AI Portfolio That Talks Back
 
-## Getting Started
+Most portfolios ask visitors to scroll.
+This one invites them to talk.
 
-First, run the development server:
+An interactive portfolio built with `Next.js`, `React`, `Three.js`, and `Gemini`, designed to feel less like a resume page and more like a live conversation with an AI/ML builder.
+
+## Why This Repo Sticks
+
+- `Interactive first`: visitors can chat with an AI assistant instead of hunting through sections.
+- `Visual memory`: animated avatar, lamp-based theme switch, and custom cursor effects make the experience feel alive.
+- `Builder identity`: the project reflects AI, machine learning, frontend craft, and product thinking in one place.
+- `Recruiter friendly`: projects, skills, resume, and contact details are surfaced through guided conversation.
+
+## Core Experience
+
+- AI portfolio assistant powered by `@google/generative-ai`
+- Context-aware replies using portfolio, resume, skills, and project data
+- Smooth light/dark scene transition with lamp interaction
+- Animated avatar and immersive UI
+- Custom fluid and canvas cursor effects
+- Project showcase, profile, skills, and resume-driven content
+
+## Tech Stack
+
+- `Next.js 16`
+- `React 19`
+- `Three.js`
+- `@react-three/fiber`
+- `@react-three/drei`
+- `Tailwind CSS 4`
+- `Google Gemini API`
+
+## Run Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file with:
 
-## Learn More
+```env
+GEMINI_API_KEY=your_api_key_here
+```
 
-To learn more about Next.js, take a look at the following resources:
+Without this key, the portfolio UI will still load, but AI chat responses will not work correctly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+src/
+  app/
+    api/chat/        # Gemini-powered portfolio chat route
+    page.js          # Main interactive landing experience
+  components/        # Avatar, chat, hero, projects, cursor, lamp UI
+  data/              # Profile, skills, contacts, projects, resume content
+  hooks/             # Theme, chat, and cursor behavior
+public/              # Images, icons, resume, 3D assets
+```
 
-## Deploy on Vercel
+## What Makes It Different
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is not a static portfolio with a better color palette.
+It is a personal brand experience built around interaction, mood, and recall.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instead of saying "here are my skills," it lets people discover them.
+Instead of saying "I work in AI," it demonstrates AI inside the product itself.
+
+That difference is what makes people remember it.
+
+## Featured Themes In The Work
+
+- AI-powered products
+- Machine learning projects
+- Conversational interfaces
+- Responsive frontend development
+- Personal branding through product design
+
+## If You Want To Adapt This
+
+Update these files first:
+
+- `src/data/profile.js`
+- `src/data/projects.js`
+- `src/data/skills.js`
+- `src/data/contacts.js`
+- `src/data/resumeText.js`
+
+Then replace placeholder links and assets inside `public/` with your own material.
+
+## Suggested GitHub Repo Description
+
+`An interactive AI portfolio built with Next.js, Three.js, and Gemini that lets visitors explore projects, skills, and resume through conversation.`
+
+## Suggested Topics
+
+`portfolio` `nextjs` `react` `threejs` `generative-ai` `gemini-api` `machine-learning` `personal-website` `ai-portfolio`
+
+---
+
+If a normal portfolio gets viewed, this one gets remembered.
